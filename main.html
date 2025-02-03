@@ -1,16 +1,78 @@
 <!DOCTYPE html>
-
-<html>
-
+<html lang="en">
 <head>
-	<link rel="stylesheet" href="styles.css">
-</head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pseudo-Classes Styling</title>
+    <style>
+        /* Set the background color of the entire page using :root pseudo-class */
+        :root {
+            --background-color: rgb(135, 206, 235);
+        }
 
+        body {
+            background-color: var(--background-color);
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        /* Styling for the article paragraphs */
+        article p:first-child {
+            color: white;
+            background-color: black;
+            padding: 10px;
+        }
+
+        article p:nth-child(2) {
+            color: black;
+            padding: 10px;
+        }
+
+        article p:last-child {
+            color: red;
+            padding: 10px;
+        }
+
+        /* Styling for unordered list */
+        ul {
+            padding: 20px;
+        }
+
+        ul li {
+            background-color: gray;
+            width: 50%;
+            padding: 10px;
+        }
+
+        ul li:nth-child(odd) {
+            background-color: white;
+        }
+
+        ul li:first-child, ul li:last-child {
+            font-size: 22px;
+        }
+
+        ul li:nth-last-child(3) {
+            background-color: pink;
+        }
+    </style>
+</head>
 <body>
-	<!-- the entire body must be written by student -->
-    <script type="text/javascript" src="./script.js">
-</script>
+
+    <article>
+        <p>First paragraph with white text on black background.</p>
+        <p>Second paragraph with standard text color.</p>
+        <p>Third paragraph with red text.</p>
+    </article>
+
+    <ul>
+        <li>List item 1</li>
+        <li>List item 2</li>
+        <li>List item 3</li>
+        <li>List item 4</li>
+        <li>List item 5</li>
+    </ul>
 
 </body>
-
 </html>
